@@ -1,21 +1,52 @@
 aid: legacy
 name: Legacy
-description: 'Legacy is a company surfaced as a portfolio company of bain-capital-ventures and added to
-  the API Evangelist network as a stub for enrichment. Sector: healthcare. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: 'Legacy is a United States direct-to-consumer male fertility company offering
+  at-home sperm testing and sperm cryopreservation without a clinic visit. Customers order
+  a collection kit online, provide a sample at home, and return it by free overnight shipping
+  to Legacy''s CLIA-certified, CLEP-approved laboratory, where results appear in a private
+  client dashboard within 48 hours of receipt. Services span basic, standard, and advanced
+  semen analysis (count, concentration, motility, morphology, and Halosperm sperm DNA
+  fragmentation), STI testing, multi-year sperm storage bundles, and male fertility
+  supplements. Legacy serves people trying to conceive and those preserving fertility ahead
+  of a vasectomy, testosterone therapy, gender-affirming care, cancer treatment, or military
+  deployment, and is in-network with selected insurers and employer fertility benefit
+  programs. Legacy publishes no public developer API; its notable machine-readable surface is
+  a first-party llms.txt written for AI answer engines.'
 url: https://raw.githubusercontent.com/api-evangelist/legacy/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://cdn.prod.website-files.com/68810031238f07e042d93aed/69208c76fcc929978549dbd5_Legacy%20sperm%20testing%20and%20freezing.jpg
+x-category: Healthcare
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - bain-capital-ventures
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: 2
+x-tier-reason: enriched-from-stub
+x-public-api: false
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
 - Healthcare
+- Fertility
+- Male Fertility
+- Diagnostics
+- Laboratory
+- Telehealth
+- Cryopreservation
+- Direct to Consumer
+- Health Insurance
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -25,3 +56,43 @@ maintainers:
 common:
 - type: Website
   url: https://www.givelegacy.com/
+- type: LLMsTxt
+  name: Legacy llms.txt
+  url: llms/legacy-llms.txt
+- type: DomainSecurity
+  url: security/legacy-domain-security.yml
+- type: Conformance
+  url: conformance/legacy-conformance.yml
+- type: Compliance
+  name: CLIA 31D2285605, CLEP PFI 6002, HIPAA
+  url: https://www.givelegacy.com/resources/legacy-our-views-on-privacy-and-data-collection
+- type: Blog
+  name: Resources
+  url: https://www.givelegacy.com/resources/
+- type: Support
+  name: Contact
+  url: https://www.givelegacy.com/contact/
+- type: HelpCenter
+  name: FAQ
+  url: https://www.givelegacy.com/faq/
+- type: Login
+  name: Client portal
+  url: https://client.givelegacy.com/
+- type: Pricing
+  name: Sperm testing kit pricing
+  url: https://www.givelegacy.com/sperm-testing-kit/
+- type: PrivacyPolicy
+  url: https://www.givelegacy.com/privacy-policy/
+- type: RefundPolicy
+  url: https://www.givelegacy.com/refund-policy/
+- type: GitHubOrganization
+  url: https://github.com/givelegacy
+- type: About
+  url: https://www.givelegacy.com/about/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/givelegacy
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
