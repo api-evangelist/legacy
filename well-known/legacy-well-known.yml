@@ -1,0 +1,57 @@
+generated: '2026-07-19'
+method: searched
+source: live HTTP probes of Legacy hosts
+notes: >-
+  No /.well-known/ discovery surface is published. The marketing site
+  (www.givelegacy.com) returns a hard 404 for every probed path, and there is no
+  robots.txt. The client portal (client.givelegacy.com) is a single-page
+  application served from Netlify whose catch-all route answers 200 with the
+  app shell (Content-Type text/html) for ANY path, including a deliberate
+  nonsense control path — so its 200s are NOT real documents and are recorded
+  here as false positives, not as discovery documents. api.givelegacy.com
+  resolves but returns 503 to unauthenticated requests and is not a public API
+  surface.
+hosts:
+- host: https://www.givelegacy.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /security.txt
+    status: 404
+  - path: /robots.txt
+    status: 404
+  - path: /llms.txt
+    status: 200
+    content_type: text/plain; charset=utf-8
+    file: ../llms/legacy-llms.txt
+  - path: /sitemap.xml
+    status: 200
+- host: https://client.givelegacy.com
+  spa_catch_all: true
+  control_probe:
+    path: /.well-known/zzz-bogus-xyz
+    status: 200
+    content_type: text/html; charset=UTF-8
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    valid: false
+    reason: SPA catch-all returned the HTML app shell, not RFC 9116 text
+  - path: /.well-known/openid-configuration
+    status: 200
+    valid: false
+    reason: SPA catch-all returned the HTML app shell, not OIDC discovery JSON
+- host: https://api.givelegacy.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 503
+documents_found: 0
+security_txt: false

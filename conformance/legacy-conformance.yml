@@ -1,0 +1,69 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.givelegacy.com/resources/legacy-our-views-on-privacy-and-data-collection
+notes: >-
+  Legacy is a direct-to-consumer clinical laboratory service (at-home semen
+  analysis and sperm cryopreservation), not an API provider. Its published
+  conformance posture is therefore clinical-laboratory and health-privacy
+  regulation rather than API/web standards. The laboratory certifications below
+  are published with their exact identifiers on Legacy's own site. No public
+  API, OpenAPI description, or developer portal exists, so all API-facing
+  standards are recorded as not applicable rather than as failures.
+standards:
+- id: clia
+  name: Clinical Laboratory Improvement Amendments (CLIA) certification
+  conforms: true
+  identifier: '31D2285605'
+  evidence: >-
+    "CLIA-certified, CLEP-approved laboratories" with CLIA ID 31D2285605
+    published in the site footer and on the privacy/data-collection page.
+- id: clep
+  name: New York State Clinical Laboratory Evaluation Program (CLEP) approval
+  conforms: true
+  identifier: 'PFI 6002'
+  evidence: CLEP PFI 6002 published in the site footer.
+- id: hipaa
+  name: Health Insurance Portability and Accountability Act
+  conforms: true
+  evidence: >-
+    Legacy states it is HIPAA compliant on its privacy and data-collection
+    page; no third-party attestation report is published.
+- id: soc2
+  name: SOC 2
+  conforms: false
+  evidence: Not claimed anywhere on the public site; no trust center published.
+- id: iso27001
+  name: ISO/IEC 27001
+  conforms: false
+  evidence: Not claimed anywhere on the public site.
+- id: gdpr
+  name: GDPR
+  conforms: false
+  evidence: >-
+    Not claimed. Legacy states it operates only within the United States, so
+    GDPR is out of scope for its stated service area.
+- id: oauth2
+  name: OAuth 2.0
+  conforms: false
+  applicable: false
+  evidence: No public API or OAuth surface published.
+- id: oidc
+  name: OpenID Connect
+  conforms: false
+  applicable: false
+  evidence: >-
+    No /.well-known/openid-configuration is served; the client portal 200s are
+    SPA catch-all responses (see well-known/legacy-well-known.yml).
+- id: rfc9457-problem-details
+  name: RFC 9457 Problem Details for HTTP APIs
+  conforms: false
+  applicable: false
+  evidence: No public API description to evaluate.
+- id: fhir-r4
+  name: HL7 FHIR R4
+  conforms: false
+  applicable: false
+  evidence: >-
+    No FHIR interface or EHR/EMR integration is documented; the clinician page
+    describes a human dashboard and PDF-style medical reports, not an interop
+    endpoint.
