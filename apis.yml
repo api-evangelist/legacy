@@ -33,7 +33,7 @@ x-backed-by:
 x-tier: 2
 x-tier-reason: enriched-from-stub
 x-public-api: false
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-19'
 tags:
