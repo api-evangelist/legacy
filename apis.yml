@@ -13,6 +13,17 @@ description: 'Legacy is a United States direct-to-consumer male fertility compan
   programs. Legacy publishes no public developer API; its notable machine-readable surface is
   a first-party llms.txt written for AI answer engines.'
 url: https://raw.githubusercontent.com/api-evangelist/legacy/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
