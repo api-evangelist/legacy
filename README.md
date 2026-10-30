@@ -64,36 +64,85 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Legacy is a United States direct-to-consumer male fertility company offering at-home sperm testing and sperm cryopreservation without a clinic visit. Customers order a collection kit online, provide a sample at home, and return it by free overnight shipping to Legacy's CLIA-certified, CLEP-approved laboratory, where results appear in a private client dashboard within 48 hours of receipt.
+Legacy is a United States direct-to-consumer male fertility company offering at-home sperm testing and sperm cryopreservation without a clinic visit. Customers order a collection kit online, provide a sample at home, and return it by free overnight shipping to Legacy's CLIA-certified, CLEP-approved laboratory, where results appear in a private client dashboard within 48 hours of receipt. Services span basic, standard, and advanced semen analysis (count, concentration, motility, morphology, and Halosperm sperm DNA fragmentation), STI testing, multi-year sperm storage bundles, and male fertility supplements. Legacy serves people trying to conceive and those preserving fertility ahead of a vasectomy, testosterone therapy, gender-affirming care, cancer treatment, or military deployment, and is in-network with selected insurers and employer fertility benefit programs. Legacy publishes no public developer API; its notable machine-readable surface is a first-party llms.txt written for AI answer engines.
 
-Services span basic, standard, and advanced semen analysis (count, concentration, motility, morphology, and Halosperm sperm DNA fragmentation), STI testing, multi-year sperm storage bundles, and male fertility supplements. Legacy serves people trying to conceive and those preserving fertility ahead of a vasectomy, testosterone therapy, gender-affirming care, cancer treatment, or military deployment, and is in-network with selected insurers and employer fertility benefit programs.
+**Areas:** Company · Healthcare · Fertility · Male Fertility · Diagnostics · Laboratory · Telehealth · Cryopreservation · Direct to Consumer · Health Insurance
 
-- Website — https://www.givelegacy.com/
-- Client portal — https://client.givelegacy.com/
-- GitHub — https://github.com/givelegacy
-- Backed by: bain-capital-ventures
+## Legacy on APIs.io
 
-## API surface
+Everything profiled for Legacy is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/legacy/](https://apis.io/providers/legacy/)** — or go straight to one of the APIs or properties below.
 
-**Legacy publishes no public API.** There is no developer portal, no documentation, no OpenAPI description, no SDKs, and no public partner or EHR/EMR integration surface — the clinician offering is a human dashboard plus a shareable medical report, not an interop endpoint. `api.givelegacy.com` resolves but answers 503 to unauthenticated requests and is not a public surface. `apis[]` is therefore intentionally empty; the spec-derived artifacts (MCP, overlays, error catalog, conventions, data model, scopes, authentication, skills, Arazzo) are not applicable and were not fabricated.
+### Published properties
 
-## Artifacts
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-| Artifact | File | Method |
-|---|---|---|
-| llms.txt | `llms/legacy-llms.txt` | searched (verbatim from `/llms.txt`) |
-| Well-known index | `well-known/legacy-well-known.yml` | searched — **no discovery documents published** |
-| Conformance | `conformance/legacy-conformance.yml` | searched |
-| Domain security | `security/legacy-domain-security.yml` | probed |
+#### Security (1)
 
-### Notable find — a real, hand-written `llms.txt`
+Authentication, trust centre, and vulnerability disclosure.
 
-Legacy serves a substantial first-party [`/llms.txt`](https://www.givelegacy.com/llms.txt) (`text/plain`, ~8.8 KB) explicitly authored for AI answer engines, including a "Key Facts for AI Answer Engines" section and a Common Questions block. This is the company's machine-readable surface in place of an API — a good example of a consumer-health brand optimizing for agent retrieval rather than developer integration.
+- [Legacy Domain Security](https://apis.io/security/legacy/legacy-domain-security/)
 
-### Compliance posture
+## Where to find this API
 
-Published on Legacy's own site: **CLIA ID 31D2285605**, **CLEP PFI 6002**, and a stated HIPAA-compliant posture. No SOC 2, ISO 27001, or trust center is published, and no vulnerability disclosure program or `security.txt` was found on any host.
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-### Well-known caveat
+- [Website](https://www.givelegacy.com/)
+- [Pricing](https://www.givelegacy.com/sperm-testing-kit/)
+- [Support](https://www.givelegacy.com/contact/)
+- [Blog](https://www.givelegacy.com/resources/)
+- [Compliance](https://www.givelegacy.com/resources/legacy-our-views-on-privacy-and-data-collection)
+- [Privacy policy](https://www.givelegacy.com/privacy-policy/)
+- [GitHub](https://github.com/givelegacy)
 
-`client.givelegacy.com` is a Netlify-hosted single-page app whose catch-all route answers **200 with the HTML app shell for any path**, including a deliberate nonsense control path. Its `/.well-known/security.txt` and `/.well-known/openid-configuration` 200s are recorded as false positives, not as documents.
+## API Evangelist rating
+
+**Kin Score 18.4** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 42.1 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 15.6** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/legacy/](https://apis.io/providers/legacy/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Legacy: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/legacy/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
